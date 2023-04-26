@@ -12,7 +12,11 @@ spring:
     driverClassName: com.mysql.cj.jdbc.Driver
 mybatis-plus:
   global-config:
-    banner: false
+    db-config:
+     # 表前缀
+      table-prefix: tb_
+
+      banner: false
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     # 将下划线映射到驼峰大小写

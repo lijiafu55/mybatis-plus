@@ -13,9 +13,10 @@ spring:
 mybatis-plus:
   global-config:
     db-config:
-      # 表前缀
+     # 表前缀
       table-prefix: tb_
-    banner: false
+
+      banner: false
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     # 将下划线映射到驼峰大小写
