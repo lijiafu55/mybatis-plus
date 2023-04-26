@@ -1,5 +1,6 @@
 package com.xss.Dao;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
@@ -14,12 +15,26 @@ import lombok.Data;
 public class Employee {
 
         private Long id;
+        //表字段映射
+        @TableField("last_name")
         private String lastName;
         private String email;
+
         private String gender;
         private Integer age;
 
-        // 省略getter和setter方法
+        //假如数据库有字段desc，mysql关键字的话
+        // 关键字查询通过注解让他变成普通字段
+        //@TableField("`desc`")
+
+
+        //假如查询不想看到年龄的话通过
+        //@TableField(select = false)放到不想查询的字段属性上
+
+
+        //假如查询数据库没有的字段是实体类自己定义的例如登录状态...
+        // @TableField(exist = false)
+        
 
 
 }

@@ -12,6 +12,9 @@ spring:
     driverClassName: com.mysql.cj.jdbc.Driver
 mybatis-plus:
   global-config:
+    db-config:
+      # 表前缀
+      table-prefix: tb_
     banner: false
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
